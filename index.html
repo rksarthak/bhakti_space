@@ -1,469 +1,515 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bhakti Space</title>
-<meta name="description" content="Bhakti Space offers vegetarian, sattvic and conscious cooking workshops. Cook with intention, eat with gratitude.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --green:#1f5d3a; --green-d:#133d26; --saffron:#d98b2b; --saffron-l:#f3d9a8;
-  --cream:#fbf6ec; --sand:#f2e9d8; --ink:#25302a; --muted:#66705f; --white:#fff;
-  --r:18px; --shadow:0 18px 50px -20px rgba(19,61,38,.35);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1;color:var(--green-d)}
-h2{font-size:clamp(2.2rem,4.5vw,3.4rem)}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-section{padding:96px 0}
-.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--saffron);font-weight:600;margin-bottom:14px;display:block}
-.lead{color:var(--muted);font-size:1.08rem;max-width:620px;margin-top:16px}
-.center{text-align:center}.center .lead{margin-inline:auto}
-.btn{display:inline-block;padding:14px 30px;border-radius:999px;font-weight:600;font-size:.95rem;border:2px solid transparent;transition:.25s;cursor:pointer;font-family:inherit}
-.btn-primary{background:var(--saffron);color:#2b1a00}
-.btn-primary:hover{background:#e79d40;transform:translateY(-2px)}
-.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff}
-.btn-ghost:hover{background:#fff;color:var(--green-d)}
-.btn-green{background:var(--green);color:#fff}.btn-green:hover{background:var(--green-d)}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bhakti Space · Conscious, Sattvic &amp; Vegetarian Cooking Workshops</title>
+  <meta name="description" content="Hands-on vegetarian, sattvic and conscious cooking workshops in Amsterdam. Cook with intention, eat with gratitude.">
+  <meta name="theme-color" content="#133d26">
 
-/* NAV */
-nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s;padding:18px 0}
-nav.solid{background:rgba(251,246,236,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(0,0,0,.06);padding:12px 0}
-nav .wrap{display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:10px}
-.logo svg{width:30px;height:30px}
-nav.solid .logo{color:var(--green-d)}
-.links{display:flex;gap:30px;align-items:center}
-.links a{color:#fff;font-size:.92rem;font-weight:500}
-nav.solid .links a:not(.btn){color:var(--ink)}
-.links a:not(.btn):hover{color:var(--saffron)}
-.burger{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
-nav.solid .burger{color:var(--green-d)}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bhakti Space · Conscious Cooking Workshops">
+  <meta property="og:description" content="Vegetarian, sattvic and conscious cooking workshops. Cook with intention, eat with gratitude.">
+  <meta property="og:image" content="img/group.jpg">
 
-/* HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;padding:0;overflow:hidden}
-.hero-slides{position:absolute;inset:0}
-.hero-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease,transform 9s ease;transform:scale(1.04)}
-.hero-slides img.on{opacity:1;animation:kb 18s ease-in-out infinite alternate}
-@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.18)}}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,38,22,.9) 0%,rgba(10,38,22,.68) 45%,rgba(10,38,22,.25) 100%)}
-.hero .wrap{position:relative;z-index:2;padding-top:90px;padding-bottom:60px}
-.hero h1{color:#fff;font-size:clamp(2.9rem,7.2vw,5.6rem);max-width:780px}
-.hero h1 em{color:var(--saffron-l);font-style:italic}
-.hero p{max-width:560px;font-size:1.15rem;margin:24px 0 36px;color:#f1ead9}
-.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-stats{display:flex;gap:44px;margin-top:64px;flex-wrap:wrap}
-.hero-stats b{display:block;font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--saffron-l);line-height:1}
-.hero-stats span{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#d6cdb6}
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4c3 4 7 6 7 11a7 7 0 0 1-14 0c0-5 4-7 7-11Z' fill='%23d98b2b'/%3E%3Cpath d='M4 22c4-1 8 0 12 5 4-5 8-6 12-5-2 5-7 7-12 7S6 27 4 22Z' fill='%231f5d3a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-/* MARQUEE */
-.strip{background:var(--green-d);color:var(--saffron-l);padding:18px 0;overflow:hidden;white-space:nowrap}
-.strip div{display:inline-block;animation:slide 32s linear infinite;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic}
-.strip span{margin:0 26px;opacity:.5}
-@keyframes slide{to{transform:translateX(-50%)}}
-
-/* ABOUT */
-.about{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
-.about-img{position:relative}
-.about-img img.main{border-radius:var(--r);box-shadow:var(--shadow);aspect-ratio:4/5;object-fit:cover;width:100%}
-.about-img img.float{position:absolute;right:-28px;bottom:-34px;width:46%;border-radius:var(--r);border:8px solid var(--cream);aspect-ratio:1;object-fit:cover;box-shadow:var(--shadow)}
-.about p{margin-top:18px;color:#4a554d}
-
-/* PILLARS */
-.pillars{background:var(--sand)}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:54px}
-.card{background:var(--white);border-radius:var(--r);padding:38px 32px;box-shadow:0 8px 30px -18px rgba(0,0,0,.25);transition:.3s;border-top:4px solid var(--saffron)}
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.card .ic{width:58px;height:58px;border-radius:50%;background:var(--sand);display:grid;place-items:center;font-size:1.7rem;margin-bottom:20px}
-.card h3{font-size:1.8rem;margin-bottom:10px}
-.card p{color:var(--muted);font-size:.97rem}
-
-/* SESSIONS */
-.sess-wrap{margin:44px -12px 0}
-.sess-track .slide{padding:14px 12px}.sess-track .sess{height:100%}
-.sess{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 8px 30px -18px rgba(0,0,0,.3);display:flex;flex-direction:column;transition:.3s}
-.sess:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.simg{height:190px;overflow:hidden}.simg img{width:100%;height:100%;object-fit:cover}
-.sess .top{min-height:128px;padding:30px 30px 22px;background:linear-gradient(135deg,var(--green) 0%,var(--green-d) 100%);color:#fff;position:relative}
-.sess-track .slide:nth-child(even) .top{background:linear-gradient(135deg,#b46f17 0%,#8a510c 100%)}
-.sess .num{font-family:'Cormorant Garamond',serif;font-size:3.6rem;opacity:.25;position:absolute;right:22px;top:6px;line-height:1}
-.sess .tag{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron-l)}
-.sess h3{color:#fff;font-size:1.75rem;margin-top:8px}
-.sess .body{padding:26px 30px 30px;display:flex;flex-direction:column;flex:1}
-.sess .body p{color:var(--muted);font-size:.95rem}
-.sess ul{list-style:none;margin:18px 0;font-size:.92rem}
-.sess li{padding:5px 0 5px 24px;position:relative}
-.sess li::before{content:"🌿";position:absolute;left:0;font-size:.8rem;top:8px}
-.meta{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid #eee;font-size:.88rem;color:var(--muted)}
-.meta a{color:var(--green);font-weight:600}.meta a:hover{color:var(--saffron)}
-
-/* CAROUSEL base */
-.car{position:relative;overflow:hidden}
-.track{display:flex;transition:transform .7s cubic-bezier(.6,.05,.2,1)}
-.slide{flex:0 0 100%}
-.arrows{display:flex;gap:10px}
-.arr{width:48px;height:48px;border-radius:50%;border:1.5px solid currentColor;background:transparent;color:inherit;font-size:1.2rem;cursor:pointer;transition:.2s}
-.arr:hover{background:var(--saffron);border-color:var(--saffron);color:#2b1a00}
-.dots{display:flex;gap:8px;justify-content:center;margin-top:26px}
-.dots button{width:9px;height:9px;border-radius:50%;border:0;background:currentColor;opacity:.3;cursor:pointer;transition:.3s;padding:0}
-.dots button.on{opacity:1;width:28px;border-radius:8px;background:var(--saffron)}
-
-/* GALLERY carousel */
-.gallery{background:var(--green-d);color:#fff}
-.gallery h2{color:#fff}
-.gallery .lead{color:#cfd8cc}
-.gal-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:44px}
-.gal-slide{flex:0 0 100%;position:relative;border-radius:var(--r);overflow:hidden}
-.gal-slide img{width:100%;height:min(66vh,620px);object-fit:cover}
-.gal-slide .cap{position:absolute;left:0;right:0;bottom:0;padding:70px 34px 26px;background:linear-gradient(transparent,rgba(0,0,0,.72));font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-style:italic}
-
-/* QUOTES carousel */
-.quotes{background:linear-gradient(160deg,var(--sand),var(--cream));text-align:center}
-.qslide{padding:20px 6% 0}
-.qmark{font-family:'Cormorant Garamond',serif;font-size:7rem;line-height:.6;color:var(--saffron);opacity:.7}
-.qtext{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3.6vw,2.8rem);font-style:italic;color:var(--green-d);max-width:880px;margin:10px auto 22px;line-height:1.3}
-.qby{font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-
-/* REVIEWS carousel */
-.rev-track .slide{flex:0 0 calc(100%/3);padding:0 12px}
-.rev{background:#fff;border-radius:var(--r);padding:34px 30px;box-shadow:0 8px 30px -18px rgba(0,0,0,.3);height:100%;display:flex;flex-direction:column}
-.stars{color:var(--saffron);letter-spacing:3px;margin-bottom:14px}
-.rev p{color:#4a554d;font-size:.98rem;flex:1}
-.who{display:flex;align-items:center;gap:14px;margin-top:24px}
-.av{width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:600}
-.who b{display:block;font-size:.95rem}.who small{color:var(--muted)}
-.rev-wrap{margin:54px -12px 0}
-.rev-ctrl{display:flex;justify-content:center;gap:16px;align-items:center;margin-top:30px;color:var(--green-d)}
-
-/* HOW */
-.how{background:var(--sand)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:54px;counter-reset:s}
-.step{text-align:center;padding:0 8px}
-.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:62px;height:62px;border-radius:50%;background:var(--green);color:var(--saffron-l);font-family:'Cormorant Garamond',serif;font-size:1.9rem;margin:0 auto 18px}
-.step h3{font-size:1.5rem;margin-bottom:6px}
-.step p{font-size:.93rem;color:var(--muted)}
-
-/* SCHEDULE */
-.sched{margin-top:50px;background:#fff;border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
-.row{display:grid;grid-template-columns:140px 1.4fr 1fr 110px 140px;gap:20px;padding:22px 32px;align-items:center;border-bottom:1px solid #eee}
-.row:last-child{border:0}
-.row .d b{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--green);display:block;line-height:1}
-.row .d span{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--saffron);font-weight:600}
-.row h4{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--green-d)}
-.row small{color:var(--muted)}
-.btn-sm{padding:9px 20px;font-size:.85rem;text-align:center}
-
-/* CONTACT */
-.contact{background:var(--green-d);color:#fff;position:relative;overflow:hidden}
-.contact h2{color:#fff}
-.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
-.contact .lead{color:#cfd8cc}
-.cinfo{margin-top:34px;display:grid;gap:14px;color:#e5ecdf}
-form{background:#fff;color:var(--ink);padding:38px;border-radius:var(--r);display:grid;gap:16px;box-shadow:0 30px 60px -25px rgba(0,0,0,.5)}
-form h3{font-size:1.9rem}
-label{font-size:.82rem;font-weight:600;color:var(--muted);display:grid;gap:6px}
-input,select,textarea{font:inherit;padding:12px 14px;border:1.5px solid #ddd5c2;border-radius:10px;background:var(--cream);color:var(--ink)}
-input:focus,select:focus,textarea:focus{outline:0;border-color:var(--green)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-
-footer{background:#0c2616;color:#9fb0a2;text-align:center;padding:36px 24px;font-size:.88rem}
-footer .logo{justify-content:center;color:#fff;margin-bottom:8px}
-
-.reveal{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
-
-@media(max-width:980px){
-  .about,.cgrid{grid-template-columns:1fr;gap:50px}
-  .grid3{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .rev-track .slide{flex:0 0 50%}
-  .row{grid-template-columns:1fr 1fr;gap:10px}
-  .about-img img.float{right:10px}
-  section{padding:72px 0}
-}
-@media(max-width:700px){
-  .burger{display:block}
-  .links{position:fixed;inset:0 0 0 auto;width:78%;background:var(--green-d);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:.35s}
-  .links.open{transform:none}
-  .links a,nav.solid .links a:not(.btn){color:#fff;font-size:1.2rem}
-  .burger{z-index:60;position:relative}
-  .rev-track .slide{flex:0 0 100%}
-  .steps,.two{grid-template-columns:1fr}
-  .hero-stats{gap:28px}
-  .gal-slide img{height:52vh}
-  form{padding:26px}
-}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/scroller.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 
-<nav id="nav">
+<!-- Icon sprite: reference with <svg class="icon"><use href="#i-name"/></svg> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-15-1 10-7 15-15 15Z"/><path d="M5 19 13 11"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-lotus" viewBox="0 0 24 24"><path d="M12 20c-4 0-8-2-9-6 3-1 6 0 9 3 3-3 6-4 9-3-1 4-5 6-9 6Z"/><path d="M12 17c-2-2-3-5-3-8 1-2 2-4 3-5 1 1 2 3 3 5 0 3-1 6-3 8Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12c0-4-3-7-8-7 0 4 3 7 8 7Z"/><path d="M12 10c0-3 2.5-6 8-6 0 4-3 6-8 6Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-3.5 3.2-5.5 6.5-5.5s6 2 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.5c2.6 0 4.6 1.6 5 4.5"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================ NAVIGATION ============================ -->
+<nav class="nav" id="nav" aria-label="Main">
   <div class="wrap">
-    <a href="#top" class="logo">
-      <svg viewBox="0 0 32 32" fill="none"><path d="M16 4c3 4 7 6 7 11a7 7 0 0 1-14 0c0-5 4-7 7-11Z" fill="#d98b2b"/><path d="M4 22c4-1 8 0 12 5 4-5 8-6 12-5-2 5-7 7-12 7S6 27 4 22Z" fill="#8cc29a"/></svg>
+    <a href="#top" class="logo" aria-label="Bhakti Space home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c3 4 7 6 7 11a7 7 0 0 1-14 0c0-5 4-7 7-11Z" fill="#d98b2b"/><path d="M4 22c4-1 8 0 12 5 4-5 8-6 12-5-2 5-7 7-12 7S6 27 4 22Z" fill="#1f5d3a"/></svg>
       Bhakti Space
     </a>
-    <button class="burger" id="burger" aria-label="Menu">☰</button>
-    <div class="links" id="links">
-      <a href="#about">Our Story</a>
-      <a href="#sessions">Sessions</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+    <div class="nav__links" id="navLinks">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#sessions">Workshops</a>
+      <a href="#experience">Experience</a>
       <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#contact" class="btn btn-primary">Book a Seat</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn btn--primary btn--sm">Book a seat</a>
     </div>
   </div>
 </nav>
 
+<!-- =============================== HERO =============================== -->
 <header class="hero" id="top">
-  <div class="hero-slides" id="heroSlides">
-    <img class="on" src="img/group.jpg" alt="Bhakti Space cooking community in green aprons">
-  </div>
-  <div class="wrap">
-    <span class="eyebrow" style="color:var(--saffron-l)">Vegetarian · Sattvic · Conscious Cooking</span>
-    <h1>Cook with <em>intention.</em><br>Eat with gratitude.</h1>
-    <p>Hands-on workshops where plant-based, sattvic cooking becomes a practice of presence, nourishment and community.</p>
-    <div class="cta">
-      <a href="#sessions" class="btn btn-primary">Explore Sessions</a>
-      <a href="#contact" class="btn btn-ghost">Reserve Your Place</a>
+  <div class="wrap hero__grid">
+    <div class="hero__text reveal">
+      <span class="eyebrow">Vegetarian · Sattvic · Conscious</span>
+      <h1>Cook with <em>intention.</em><br>Eat with <em>gratitude.</em></h1>
+      <p>Hands-on cooking workshops in Amsterdam where wholesome, plant-based sattvic food becomes a practice of presence, nourishment and community.</p>
+      <div class="hero__cta">
+        <a href="#sessions" class="btn btn--primary">Explore workshops <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a href="#philosophy" class="btn btn--outline">Why sattvic?</a>
+      </div>
+      <div class="hero__stats">
+        <div><b>100%</b><span>Vegetarian</span></div>
+        <div><b>4</b><span>Signature workshops</span></div>
+        <div><b>12</b><span>Seats per session</span></div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div><b>100%</b><span>Vegetarian</span></div>
-      <div><b>4</b><span>Signature sessions</span></div>
-      <div><b>12</b><span>Seats per workshop</span></div>
+
+    <div class="hero__media reveal" data-delay="1">
+      <img class="hero__main" src="img/group.jpg" width="1600" height="1200" alt="Workshop participants in green aprons smiling together around the kitchen table" fetchpriority="high">
+      <img class="hero__float" src="img/plate.jpg" width="1125" height="1500" alt="A plate of rice, dal and colourful vegetable dishes">
+      <div class="hero__badge">
+        <span class="dot"><svg class="icon"><use href="#i-users"/></svg></span>
+        <div><b>Small, intimate groups</b><span>Cook together, eat together</span></div>
+      </div>
     </div>
   </div>
+  <svg class="hero__ornament icon" aria-hidden="true"><use href="#i-lotus"/></svg>
 </header>
 
-<div class="strip"><div id="strip"></div></div>
+<div class="strip" aria-label="Our values">
+  <div class="strip__track" id="stripTrack">
+    <span>Vegetarian <i>✦</i></span><span>Sattvic <i>✦</i></span><span>Conscious Cooking <i>✦</i></span>
+    <span>Seasonal <i>✦</i></span><span>Plant-Based <i>✦</i></span><span>Mindful Eating <i>✦</i></span>
+    <span>Community <i>✦</i></span><span>Gratitude <i>✦</i></span>
+  </div>
+</div>
 
-<section id="about">
-  <div class="wrap about">
-    <div class="about-img reveal">
-      <img class="main" src="img/table2.jpg" alt="Participants gathered around the long workshop table" style="object-position:60% 50%">
-      </div>
-    <div class="reveal">
-      <span class="eyebrow">Our Story</span>
+<main id="main">
+
+<!-- ============================ PHILOSOPHY ============================ -->
+<section class="section" id="philosophy">
+  <div class="wrap intro">
+    <div class="intro__media reveal">
+      <img src="img/table.jpg" width="1200" height="1600" loading="lazy" alt="Participants sit in a quiet moment of reflection around the long table before cooking begins">
+      <blockquote class="intro__quote">“Every meal begins with a pause.”<small>The Bhakti Space kitchen</small></blockquote>
+    </div>
+    <div class="reveal" data-delay="1">
+      <span class="eyebrow">Our story</span>
       <h2>A kitchen that feeds more than the body</h2>
-      <p><b>Bhakti</b> means devotion. At Bhakti Space we bring that spirit into the kitchen: every chop, stir and shared meal becomes an act of care for ourselves, each other and the earth.</p>
-      <p>Our workshops are rooted in <b>sattvic</b> principles of food that is fresh, seasonal, gently spiced and prepared with a calm mind. No meat, no fish, no rush. Just good ingredients, honest technique and a table full of people.</p>
-      <p>Whether you have never held a chef's knife or have cooked for decades, you will leave with new recipes, a lighter mind and friends around the table.</p>
-      <a href="#sessions" class="btn btn-green" style="margin-top:28px">See what we cook</a>
+      <p><strong>Bhakti</strong> means devotion. At Bhakti Space we bring that spirit into the kitchen: every chop, stir and shared meal becomes an act of care for ourselves, for each other and for the earth.</p>
+      <p>Our workshops are rooted in <strong>sattvic</strong> principles: food that is fresh, seasonal, gently spiced and prepared with a calm mind. No meat, no fish, no rush. Just good ingredients, honest technique and a table full of people.</p>
+      <p>Whether you have never held a chef's knife or have cooked for decades, you will leave with new recipes, a lighter mind and new friends around the table.</p>
+      <a href="#sessions" class="btn btn--green">See what we cook <svg class="icon"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
 
-<section class="pillars">
+<section class="section section--sand">
   <div class="wrap center">
-    <span class="eyebrow">Our Philosophy</span>
+    <span class="eyebrow">Our philosophy</span>
     <h2>Three pillars of every workshop</h2>
     <p class="lead">Simple ideas that shape what we cook, how we cook and why we gather.</p>
-    <div class="grid3">
-      <div class="card reveal"><div class="ic">🥬</div><h3>Vegetarian</h3><p>Plant-forward, colourful and satisfying. We show that vegetarian food can be rich, deeply flavoured and complete.</p></div>
-      <div class="card reveal"><div class="ic">🪔</div><h3>Sattvic</h3><p>Fresh, seasonal, light and balanced. Sattvic cooking, drawn from Ayurvedic tradition, supports clarity, energy and calm.</p></div>
-      <div class="card reveal"><div class="ic">🧘</div><h3>Conscious</h3><p>Mindful sourcing, zero-waste habits and full presence at the stove. We cook slowly and we taste with attention.</p></div>
+    <div class="pillars">
+      <article class="pillar reveal">
+        <div class="pillar__icon"><svg class="icon"><use href="#i-leaf"/></svg></div>
+        <h3>Vegetarian</h3>
+        <p>Plant-forward, colourful and deeply satisfying. We show that vegetarian food can be rich, full of flavour and nutritionally complete, with no compromise.</p>
+      </article>
+      <article class="pillar reveal" data-delay="1">
+        <div class="pillar__icon"><svg class="icon"><use href="#i-sun"/></svg></div>
+        <h3>Sattvic</h3>
+        <p>Fresh, seasonal, light and balanced. Rooted in Ayurvedic tradition, sattvic food supports clarity, steady energy and a calm, contented mind.</p>
+      </article>
+      <article class="pillar reveal" data-delay="2">
+        <div class="pillar__icon"><svg class="icon"><use href="#i-lotus"/></svg></div>
+        <h3>Conscious</h3>
+        <p>Mindful sourcing, low-waste habits and full presence at the stove. We cook slowly, taste with attention and eat with gratitude.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section id="sessions">
+<!-- ========================== SATTVIC PLATE ========================== -->
+<section class="section section--dark">
+  <div class="wrap sattvic">
+    <div class="sattvic__media reveal">
+      <img src="img/plate.jpg" width="1125" height="1500" loading="lazy" alt="Top-down view of a sattvic plate with basmati rice, yellow dal, beetroot-carrot salad and vegetable curry">
+    </div>
+    <div class="reveal" data-delay="1">
+      <span class="eyebrow">What is sattvic food?</span>
+      <h2>Food that leaves you light, clear and nourished</h2>
+      <p class="lead">In Ayurveda, <em>sattva</em> is the quality of harmony and clarity. A sattvic meal is simple, fresh and made with love. It nourishes the body without weighing down the mind.</p>
+      <div class="sattvic__lists">
+        <div>
+          <h4>On our plate</h4>
+          <ul class="ticks">
+            <li><svg class="icon"><use href="#i-check"/></svg>Fresh, seasonal vegetables &amp; fruit</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Whole grains, lentils &amp; dals</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Gentle spices: turmeric, cumin, ginger, fennel</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Nuts, seeds, herbs &amp; good oils</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Left out</h4>
+          <ul class="ticks ticks--muted">
+            <li><svg class="icon"><use href="#i-minus"/></svg>Meat, fish &amp; eggs</li>
+            <li><svg class="icon"><use href="#i-minus"/></svg>Heavily processed foods</li>
+            <li><svg class="icon"><use href="#i-minus"/></svg>Stale or reheated leftovers</li>
+            <li><svg class="icon"><use href="#i-minus"/></svg>Cooking in a hurry</li>
+          </ul>
+        </div>
+      </div>
+      <p class="sattvic__note">The most important ingredient is the state of mind of the cook. That is why every workshop begins with a moment of stillness.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SESSIONS ============================= -->
+<section class="section" id="sessions">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Our Sessions</span>
+      <span class="eyebrow">Workshops</span>
       <h2>Find the session that calls you</h2>
-      <p class="lead">Four signature workshops, each hands-on and ending with everyone sharing the meal they made. Swipe or use the arrows.</p>
+      <p class="lead">Four signature workshops, each hands-on and ending with everyone sitting down to share the meal they made together.</p>
     </div>
-    <div class="car sess-wrap" id="s"><div class="track rev-track sess-track">
-<div class="slide"><article class="sess"><div class="simg"><img src="img/chef.jpg" alt="" style="object-position:50% 30%"></div><div class="top"><span class="num">01</span><span class="tag">Beginner friendly</span><h3>Sattvic Kitchen Basics</h3></div>
-        <div class="body"><p>Learn the foundations of a calm, balanced kitchen: khichdi, seasonal sabzi, fresh chutneys and soft rotis.</p>
-        <ul><li>Sattvic principles explained</li><li>Knife skills and prep rhythm</li><li>A full 4-dish meal</li></ul>
-        <div class="meta"><span>3.5 hrs · €65</span><a href="#contact">Book →</a></div></div></article></div>
-<div class="slide"><article class="sess"><div class="simg"><img src="img/table.jpg" alt="" style="object-position:50% 40%"></div><div class="top"><span class="num">02</span><span class="tag">Mindfulness</span><h3>Cooking as Meditation</h3></div>
-        <div class="body"><p>A slower session beginning in silence. Cook with breath, intention and attention, then eat mindfully together.</p>
-        <ul><li>Opening breath practice</li><li>Silent cooking circle</li><li>Mindful eating ritual</li></ul>
-        <div class="meta"><span>3 hrs · €60</span><a href="#contact">Book →</a></div></div></article></div>
-<div class="slide"><article class="sess"><div class="simg"><img src="img/spices.jpg" alt="" style="object-position:50% 25%"></div><div class="top"><span class="num">03</span><span class="tag">Flavour</span><h3>Ayurvedic Spice Alchemy</h3></div>
-        <div class="body"><p>Discover how turmeric, cumin, fennel, ginger and hing heal and delight. Blend your own masala to take home.</p>
-        <ul><li>Spices for digestion and balance</li><li>Tempering (tadka) technique</li><li>Your own spice jar</li></ul>
-        <div class="meta"><span>3 hrs · €65</span><a href="#contact">Book →</a></div></div></article></div>
-<div class="slide"><article class="sess"><div class="simg"><img src="img/feast.jpg" alt="" style="object-position:50% 55%"></div><div class="top"><span class="num">04</span><span class="tag">Seasonal</span><h3>The Plant-Based Feast</h3></div>
-        <div class="body"><p>A celebratory multi-course vegetarian meal built on the season's harvest, ideal for groups and friends.</p>
-        <ul><li>Starter, main, side and dessert</li><li>Plating and presentation</li><li>Perfect for team or friend groups</li></ul>
-        <div class="meta"><span>4 hrs · €80</span><a href="#contact">Book →</a></div></div></article></div>
-</div></div>
-    <div class="rev-ctrl"><button class="arr" data-car="s" data-d="-1" aria-label="Previous">←</button><div class="dots" data-for="s" style="margin:0"></div><button class="arr" data-car="s" data-d="1" aria-label="Next">→</button></div>
+
+    <div class="sessions" id="sessionList">
+      <article class="session reveal">
+        <div class="session__img"><img src="img/spices.jpg" width="1125" height="1500" loading="lazy" alt="Host preparing fresh green beans, peppers and herbs at the workshop table" style="object-position:50% 35%"><span class="session__num">01</span></div>
+        <div class="session__body">
+          <span class="session__tag">Beginner friendly</span>
+          <h3>Sattvic Kitchen Basics</h3>
+          <p>The foundations of a calm, balanced kitchen: khichdi, seasonal sabzi, fresh chutneys and soft rotis.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Sattvic principles explained</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Knife skills and prep rhythm</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>A complete four-dish meal</li>
+          </ul>
+          <div class="session__meta"><span><b>€65</b> · 3.5 hrs</span><a href="#contact" data-session="Sattvic Kitchen Basics">Book <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </article>
+
+      <article class="session reveal" data-delay="1">
+        <div class="session__img"><img src="img/table.jpg" width="1200" height="1600" loading="lazy" alt="Guests in a moment of silence at the table, one with hands in prayer" style="object-position:75% 80%"><span class="session__num">02</span></div>
+        <div class="session__body">
+          <span class="session__tag">Mindfulness</span>
+          <h3>Cooking as Meditation</h3>
+          <p>A slower session that begins in silence. Cook with breath, intention and attention, then eat mindfully together.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Opening breath practice</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Silent cooking circle</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Mindful eating ritual</li>
+          </ul>
+          <div class="session__meta"><span><b>€60</b> · 3 hrs</span><a href="#contact" data-session="Cooking as Meditation">Book <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </article>
+
+      <article class="session reveal">
+        <div class="session__img"><img src="img/chef.jpg" width="1125" height="1500" loading="lazy" alt="Host explaining spices in front of pans of freshly cooked vegetables" style="object-position:50% 40%"><span class="session__num">03</span></div>
+        <div class="session__body">
+          <span class="session__tag">Flavour</span>
+          <h3>Ayurvedic Spice Alchemy</h3>
+          <p>Discover how turmeric, cumin, fennel, ginger and hing heal and delight. Blend your own masala to take home.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Spices for digestion and balance</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Tempering (tadka) technique</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Your own spice jar to take home</li>
+          </ul>
+          <div class="session__meta"><span><b>€65</b> · 3 hrs</span><a href="#contact" data-session="Ayurvedic Spice Alchemy">Book <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </article>
+
+      <article class="session reveal" data-delay="1">
+        <div class="session__img"><img src="img/feast.jpg" width="1125" height="1500" loading="lazy" alt="A smiling group standing behind a table full of the vegetarian dishes they cooked" style="object-position:50% 50%"><span class="session__num">04</span></div>
+        <div class="session__body">
+          <span class="session__tag">Seasonal · Groups</span>
+          <h3>The Plant-Based Feast</h3>
+          <p>A celebratory multi-course vegetarian meal built on the season's harvest. Ideal for friends, families and teams.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Starter, main, side and dessert</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Plating and presentation</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Perfect for team offsites</li>
+          </ul>
+          <div class="session__meta"><span><b>€80</b> · 4 hrs</span><a href="#contact" data-session="The Plant-Based Feast">Book <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Shown on mobile only, where the sessions become a swipeable carousel -->
+    <div class="scroller-controls" aria-label="Browse workshops">
+      <button class="carousel__arrow" type="button" data-scroller-prev="sessionList" aria-label="Previous workshop">←</button>
+      <div class="carousel__dots" data-scroller-dots="sessionList"></div>
+      <button class="carousel__arrow" type="button" data-scroller-next="sessionList" aria-label="Next workshop">→</button>
+    </div>
   </div>
 </section>
 
-<section class="gallery" id="gallery">
+<!-- ============================ EXPERIENCE ============================ -->
+<section class="section section--sand" id="experience">
+  <div class="wrap center">
+    <span class="eyebrow">What to expect</span>
+    <h2>Your afternoon at Bhakti Space</h2>
+    <p class="lead">From the first cup of tea to the last bite, every workshop follows a gentle rhythm.</p>
+    <!-- Timeline: each step's arrow (.step__arrow) points to the next step -->
+    <ol class="steps">
+      <li class="step reveal">
+        <div class="step__img"><img src="img/prep.jpg" width="1200" height="1600" loading="lazy" alt="Bamboo boards, knives and green aprons laid out ready for guests" style="object-position:40% 30%"><span class="step__num">1</span></div>
+        <div class="step__text">
+          <span class="step__time">Welcome</span>
+          <h3>Arrive</h3>
+          <p>Apron on, station ready. Settle in with a cup of herbal tea.</p>
+        </div>
+        <svg class="step__arrow" viewBox="0 0 100 30" aria-hidden="true"><path class="step__arrow-line" d="M4 22 C 30 2, 66 2, 92 18"/><path class="step__arrow-head" d="M83 11 L93 19 L81 22"/></svg>
+      </li>
+      <li class="step reveal" data-delay="1">
+        <div class="step__img"><img src="img/table.jpg" width="1200" height="1600" loading="lazy" alt="Guests with eyes closed in a short centring moment" style="object-position:85% 72%"><span class="step__num">2</span></div>
+        <div class="step__text">
+          <span class="step__time">Stillness</span>
+          <h3>Centre</h3>
+          <p>A moment of stillness, then an introduction to the menu.</p>
+        </div>
+        <svg class="step__arrow" viewBox="0 0 100 30" aria-hidden="true"><path class="step__arrow-line" d="M4 22 C 30 2, 66 2, 92 18"/><path class="step__arrow-head" d="M83 11 L93 19 L81 22"/></svg>
+      </li>
+      <li class="step reveal" data-delay="2">
+        <div class="step__img"><img src="img/chef.jpg" width="1125" height="1500" loading="lazy" alt="Pans of colourful vegetables cooking on the shared table" style="object-position:50% 82%"><span class="step__num">3</span></div>
+        <div class="step__text">
+          <span class="step__time">Hands-on</span>
+          <h3>Cook</h3>
+          <p>Chop, stir and season side by side, guided by our hosts.</p>
+        </div>
+        <svg class="step__arrow" viewBox="0 0 100 30" aria-hidden="true"><path class="step__arrow-line" d="M4 22 C 30 2, 66 2, 92 18"/><path class="step__arrow-head" d="M83 11 L93 19 L81 22"/></svg>
+      </li>
+      <li class="step reveal" data-delay="3">
+        <div class="step__img"><img src="img/serving.jpg" width="1125" height="1500" loading="lazy" alt="Host serving rice to guests holding their plates" style="object-position:45% 60%"><span class="step__num">4</span></div>
+        <div class="step__text">
+          <span class="step__time">Together</span>
+          <h3>Share</h3>
+          <p>Sit down, give thanks and enjoy the meal you created.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================== GALLERY ============================== -->
+<section class="section" id="gallery">
   <div class="wrap">
-    <div class="gal-head">
+    <div class="gallery__head">
       <div>
         <span class="eyebrow">Moments</span>
         <h2>Life at the Bhakti table</h2>
-        <p class="lead">Green aprons, warm kitchens and plenty of laughter.</p>
+        <p class="lead">Green aprons, warm kitchens and plenty of laughter. Click any photo to enlarge.</p>
       </div>
-      <div class="arrows"><button class="arr" data-car="g" data-d="-1" aria-label="Previous">←</button><button class="arr" data-car="g" data-d="1" aria-label="Next">→</button></div>
+      <a href="#contact" class="btn btn--outline">Join the next one</a>
     </div>
-    <div class="car" id="g">
-      <div class="track">
-        <div class="slide gal-slide"><img src="img/plate.jpg" alt="A plate of freshly cooked vegetarian food" style="object-position:50% 40%"><div class="cap">Food made with care, eaten with gratitude</div></div>
-        <div class="slide gal-slide"><img src="img/serving.jpg" alt="Host serving food" style="object-position:50% 55%"><div class="cap">Cooking is better when it is shared</div></div>
-        <div class="slide gal-slide"><img src="img/prep.jpg" alt="Prep station" style="object-position:50% 40%"><div class="cap">Everything ready, mind unhurried</div></div>
-        <div class="slide gal-slide"><img src="img/team.jpg" alt="Team smiling" style="object-position:50% 45%"><div class="cap">Joy is the secret ingredient</div></div>
-      </div>
+
+    <div class="masonry" id="galleryGrid">
+      <!-- To add a photo: copy a <figure>. Add class "is-wide" for landscape shots. -->
+      <figure class="is-wide reveal"><img src="img/group.jpg" width="1600" height="1200" loading="lazy" alt="The whole workshop group in green aprons" style="object-position:50% 60%"><figcaption>Strangers at noon, friends by dinner</figcaption></figure>
+      <figure class="reveal" data-delay="1"><img src="img/table.jpg" width="1200" height="1600" loading="lazy" alt="A moment of silence before cooking" style="object-position:60% 70%"><figcaption>Every meal begins with a pause</figcaption></figure>
+      <figure class="reveal" data-delay="2"><img src="img/plate.jpg" width="1125" height="1500" loading="lazy" alt="A freshly served sattvic plate" style="object-position:50% 15%"><figcaption>Food made with care, eaten with gratitude</figcaption></figure>
+      <figure class="reveal"><img src="img/feast.jpg" width="1125" height="1500" loading="lazy" alt="Group proudly standing behind their dishes"><figcaption>Joy is the secret ingredient</figcaption></figure>
+      <figure class="reveal" data-delay="1"><img src="img/serving.jpg" width="1125" height="1500" loading="lazy" alt="Host serving rice to guests"><figcaption>Cooking is better when it is shared</figcaption></figure>
+      <figure class="reveal" data-delay="2"><img src="img/spices.jpg" width="1125" height="1500" loading="lazy" alt="Fresh ingredients ready on the table" style="object-position:50% 60%"><figcaption>Fresh, seasonal, simple</figcaption></figure>
+      <figure class="reveal" data-delay="3"><img src="img/chef.jpg" width="1125" height="1500" loading="lazy" alt="Host explaining the dishes"><figcaption>Learning the why, not only the how</figcaption></figure>
     </div>
-    <div class="dots" data-for="g"></div>
   </div>
 </section>
 
-<section class="quotes">
-  <div class="wrap">
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <figure><img src="" alt=""><figcaption></figcaption></figure>
+  <button class="lightbox__btn lightbox__close" type="button" data-lightbox-close aria-label="Close">✕</button>
+  <button class="lightbox__btn lightbox__prev" type="button" data-lightbox-prev aria-label="Previous photo">←</button>
+  <button class="lightbox__btn lightbox__next" type="button" data-lightbox-next aria-label="Next photo">→</button>
+</dialog>
+
+<!-- ============================== QUOTES ============================== -->
+<section class="section quotes" aria-label="Words to cook by">
+  <div class="wrap center">
     <span class="eyebrow">Words to cook by</span>
-    <div class="car" id="q">
-      <div class="track">
-        <div class="slide qslide"><div class="qmark">“</div><p class="qtext">Smile, breathe and go slowly.</p><span class="qby">Thich Nhat Hanh</span></div>
-        <div class="slide qslide"><div class="qmark">“</div><p class="qtext">Eat food. Not too much. Mostly plants.</p><span class="qby">Michael Pollan</span></div>
-        <div class="slide qslide"><div class="qmark">“</div><p class="qtext">When diet is wrong, medicine is of no use. When diet is correct, medicine is of no need.</p><span class="qby">Ayurvedic proverb</span></div>
-        <div class="slide qslide"><div class="qmark">“</div><p class="qtext">When you cook with love, the food carries it to every heart at the table.</p><span class="qby">The Bhakti Space kitchen</span></div>
+    <div class="carousel" id="quotes">
+      <div class="carousel__track">
+        <div class="carousel__slide quote"><div class="quote__mark">“</div><p class="quote__text">Smile, breathe and go slowly.</p><span class="quote__by">Thich Nhat Hanh</span></div>
+        <div class="carousel__slide quote"><div class="quote__mark">“</div><p class="quote__text">Eat food. Not too much. Mostly plants.</p><span class="quote__by">Michael Pollan</span></div>
+        <div class="carousel__slide quote"><div class="quote__mark">“</div><p class="quote__text">When diet is wrong, medicine is of no use. When diet is correct, medicine is of no need.</p><span class="quote__by">Ayurvedic proverb</span></div>
+        <div class="carousel__slide quote"><div class="quote__mark">“</div><p class="quote__text">When you cook with love, the food carries it to every heart at the table.</p><span class="quote__by">The Bhakti Space kitchen</span></div>
       </div>
     </div>
-    <div class="dots" data-for="q" style="color:var(--green-d)"></div>
+    <div class="carousel__controls"><div class="carousel__dots" data-carousel-dots="quotes"></div></div>
   </div>
 </section>
 
-<section id="reviews">
+<!-- ============================== REVIEWS ============================== -->
+<section class="section" id="reviews-section">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Kind Words</span>
+      <span class="eyebrow">Kind words</span>
       <h2>What our guests say</h2>
+      <!-- TODO: replace these sample reviews with real guest feedback before launch -->
       <p class="lead">Sample reviews shown for layout. Replace them with your real guest feedback.</p>
     </div>
-    <div class="rev-wrap car" id="r">
-      <div class="track rev-track">
-        <div class="slide"><div class="rev"><div class="stars">★★★★★</div><p>“I came for the recipes and left with a completely different relationship with food. The silence before cooking was unforgettable.”</p><div class="who"><div class="av">A</div><div><b>Anika R.</b><small>Cooking as Meditation</small></div></div></div></div>
-        <div class="slide"><div class="rev"><div class="stars">★★★★★</div><p>“Warm, welcoming and beautifully organised. I finally understand how to use spices properly. My kitchen smells like home now.”</p><div class="who"><div class="av">M</div><div><b>Marieke D.</b><small>Ayurvedic Spice Alchemy</small></div></div></div></div>
-        <div class="slide"><div class="rev"><div class="stars">★★★★★</div><p>“We booked it for our team and it was the best offsite we have had. Everyone cooked, laughed and ate together.”</p><div class="who"><div class="av">J</div><div><b>Jonas K.</b><small>Private group workshop</small></div></div></div></div>
-        <div class="slide"><div class="rev"><div class="stars">★★★★★</div><p>“Zero experience with Indian cooking and I felt supported the whole time. Light, delicious, and I felt amazing afterwards.”</p><div class="who"><div class="av">S</div><div><b>Sofia L.</b><small>Sattvic Kitchen Basics</small></div></div></div></div>
-        <div class="slide"><div class="rev"><div class="stars">★★★★★</div><p>“Pure joy from start to finish. The teachers share so much heart and knowledge. I'm already booking the next one.”</p><div class="who"><div class="av">P</div><div><b>Priya N.</b><small>Cooking as Meditation</small></div></div></div></div>
-        <div class="slide"><div class="rev"><div class="stars">★★★★★</div><p>“A rare space where you slow down. The feast we cooked together was the best vegetarian meal I have ever eaten.”</p><div class="who"><div class="av">T</div><div><b>Tom B.</b><small>The Plant-Based Feast</small></div></div></div></div>
+    <div class="carousel reviews" id="reviews">
+      <div class="carousel__track">
+        <div class="carousel__slide"><div class="review"><div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div><p>“I came for the recipes and left with a completely different relationship with food. The silence before cooking was unforgettable.”</p><div class="review__who"><div class="review__avatar">A</div><div><b>Anika R.</b><small>Cooking as Meditation</small></div></div></div></div>
+        <div class="carousel__slide"><div class="review"><div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div><p>“Warm, welcoming and beautifully organised. I finally understand how to use spices properly. My kitchen smells like home now.”</p><div class="review__who"><div class="review__avatar">M</div><div><b>Marieke D.</b><small>Ayurvedic Spice Alchemy</small></div></div></div></div>
+        <div class="carousel__slide"><div class="review"><div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div><p>“We booked it for our team and it was the best offsite we have had. Everyone cooked, laughed and ate together.”</p><div class="review__who"><div class="review__avatar">J</div><div><b>Jonas K.</b><small>Private group workshop</small></div></div></div></div>
+        <div class="carousel__slide"><div class="review"><div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div><p>“Zero experience with Indian cooking and I felt supported the whole time. Light, delicious, and I felt amazing afterwards.”</p><div class="review__who"><div class="review__avatar">S</div><div><b>Sofia L.</b><small>Sattvic Kitchen Basics</small></div></div></div></div>
+        <div class="carousel__slide"><div class="review"><div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div><p>“Pure joy from start to finish. The hosts share so much heart and knowledge. I'm already booking the next one.”</p><div class="review__who"><div class="review__avatar">P</div><div><b>Priya N.</b><small>Cooking as Meditation</small></div></div></div></div>
+        <div class="carousel__slide"><div class="review"><div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div><p>“A rare space where you slow down. The feast we cooked together was the best vegetarian meal I have ever eaten.”</p><div class="review__who"><div class="review__avatar">T</div><div><b>Tom B.</b><small>The Plant-Based Feast</small></div></div></div></div>
       </div>
     </div>
-    <div class="rev-ctrl">
-      <button class="arr" data-car="r" data-d="-1" aria-label="Previous">←</button>
-      <button class="arr" data-car="r" data-d="1" aria-label="Next">→</button>
+    <div class="carousel__controls">
+      <button class="carousel__arrow" type="button" data-carousel="reviews" data-step="-1" aria-label="Previous reviews">←</button>
+      <div class="carousel__dots" data-carousel-dots="reviews"></div>
+      <button class="carousel__arrow" type="button" data-carousel="reviews" data-step="1" aria-label="Next reviews">→</button>
     </div>
   </div>
 </section>
 
-<section class="how">
-  <div class="wrap center">
-    <span class="eyebrow">What to expect</span>
-    <h2>Your evening at Bhakti Space</h2>
-    <div class="steps">
-      <div class="step"><h3>Arrive</h3><p>Receive your apron, settle in and share a cup of herbal tea.</p></div>
-      <div class="step"><h3>Centre</h3><p>A short moment of stillness and an introduction to the menu.</p></div>
-      <div class="step"><h3>Cook</h3><p>Chop, stir and season side by side with guidance from our hosts.</p></div>
-      <div class="step"><h3>Share</h3><p>Sit together, give thanks and enjoy the meal you made.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="schedule">
+<!-- ============================= SCHEDULE ============================= -->
+<section class="section section--sand" id="schedule">
   <div class="wrap">
     <div class="center">
       <span class="eyebrow">Upcoming</span>
       <h2>Next workshops</h2>
-      <p class="lead">Places are limited to keep the experience intimate. Dates below are examples; update them to your real calendar.</p>
+      <!-- TODO: update with real dates -->
+      <p class="lead">Places are limited to keep each workshop intimate. Dates below are examples; update them to your real calendar.</p>
     </div>
-    <div class="sched">
-      <div class="row"><div class="d"><b>07</b><span>Dec 2026</span></div><div><h4>Sattvic Kitchen Basics</h4><small>Beginner friendly</small></div><div><small>Sunday · 11:00 – 14:30</small></div><div><b>€65</b></div><a href="#contact" class="btn btn-green btn-sm">Reserve</a></div>
-      <div class="row"><div class="d"><b>14</b><span>Dec 2026</span></div><div><h4>Cooking as Meditation</h4><small>Silent practice</small></div><div><small>Sunday · 15:00 – 18:00</small></div><div><b>€60</b></div><a href="#contact" class="btn btn-green btn-sm">Reserve</a></div>
-      <div class="row"><div class="d"><b>11</b><span>Jan 2027</span></div><div><h4>Ayurvedic Spice Alchemy</h4><small>Take-home masala</small></div><div><small>Sunday · 11:00 – 14:00</small></div><div><b>€65</b></div><a href="#contact" class="btn btn-green btn-sm">Reserve</a></div>
-      <div class="row"><div class="d"><b>25</b><span>Jan 2027</span></div><div><h4>The Plant-Based Feast</h4><small>Multi-course</small></div><div><small>Sunday · 15:00 – 19:00</small></div><div><b>€80</b></div><a href="#contact" class="btn btn-green btn-sm">Reserve</a></div>
+    <div class="schedule reveal">
+      <div class="schedule__row"><div class="schedule__date"><b>07</b><span>Dec 2026</span></div><div><h4>Sattvic Kitchen Basics</h4><small>Beginner friendly</small></div><small>Sunday · 11:00 – 14:30</small><span class="schedule__price">€65</span><a href="#contact" class="btn btn--green btn--sm" data-session="Sattvic Kitchen Basics">Reserve</a></div>
+      <div class="schedule__row"><div class="schedule__date"><b>14</b><span>Dec 2026</span></div><div><h4>Cooking as Meditation</h4><small>Silent practice</small></div><small>Sunday · 15:00 – 18:00</small><span class="schedule__price">€60</span><a href="#contact" class="btn btn--green btn--sm" data-session="Cooking as Meditation">Reserve</a></div>
+      <div class="schedule__row"><div class="schedule__date"><b>11</b><span>Jan 2027</span></div><div><h4>Ayurvedic Spice Alchemy</h4><small>Take-home masala</small></div><small>Sunday · 11:00 – 14:00</small><span class="schedule__price">€65</span><a href="#contact" class="btn btn--green btn--sm" data-session="Ayurvedic Spice Alchemy">Reserve</a></div>
+      <div class="schedule__row"><div class="schedule__date"><b>25</b><span>Jan 2027</span></div><div><h4>The Plant-Based Feast</h4><small>Multi-course</small></div><small>Sunday · 15:00 – 19:00</small><span class="schedule__price">€80</span><a href="#contact" class="btn btn--green btn--sm" data-session="The Plant-Based Feast">Reserve</a></div>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <div class="wrap cgrid">
-    <div>
+<!-- ================================ FAQ ================================ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Good to know</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Do I need any cooking experience?</summary>
+        <p>Not at all. Our workshops welcome complete beginners as well as seasoned home cooks. You will work in small teams and our hosts guide every step.</p>
+      </details>
+      <details>
+        <summary>What exactly is sattvic cooking?</summary>
+        <p>Sattvic cooking comes from the yogic and Ayurvedic traditions. It favours fresh, seasonal, vegetarian ingredients, gentle spices and a calm, grateful state of mind while cooking. The result is food that feels light, nourishing and balancing.</p>
+      </details>
+      <details>
+        <summary>Can you accommodate vegan diets or allergies?</summary>
+        <p>All workshops are fully vegetarian. Vegan and allergy adaptations are available on request; just mention them in your booking message.</p>
+      </details>
+      <details>
+        <summary>What should I bring?</summary>
+        <p>Just yourself and an appetite. Aprons, ingredients, tools and recipes are all provided. Many guests bring a small container to take home leftovers.</p>
+      </details>
+      <details>
+        <summary>Do you host private or team workshops?</summary>
+        <p>Yes. We regularly host birthdays, friend groups and corporate team offsites. Choose “Private group or team workshop” in the form below and tell us your preferred date and group size.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CONTACT ============================== -->
+<section class="section section--dark contact" id="contact">
+  <div class="wrap contact__grid">
+    <div class="reveal">
       <span class="eyebrow">Join us</span>
       <h2>Come cook with us</h2>
       <p class="lead">Reserve your seat, ask a question or plan a private workshop for your group. We reply within two days.</p>
-      <div class="cinfo">
-        <div>📍 Amsterdam, Netherlands</div>
-        <div>✉️ hello@bhaktispace.com</div>
-        <div>🌱 Dietary needs: all workshops are vegetarian; vegan and allergy adaptations on request</div>
-      </div>
+      <ul class="contact__info">
+        <li><svg class="icon"><use href="#i-pin"/></svg>Amsterdam, Netherlands</li>
+        <li><svg class="icon"><use href="#i-mail"/></svg><a href="mailto:hello@bhaktispace.com">hello@bhaktispace.com</a></li>
+        <li><svg class="icon"><use href="#i-sprout"/></svg>All workshops are vegetarian; vegan and allergy adaptations on request</li>
+      </ul>
+      <img class="contact__img" src="img/feast.jpg" width="1125" height="1500" loading="lazy" alt="Workshop guests smiling behind the dishes they cooked">
     </div>
-    <form id="form">
+
+    <form class="form reveal" id="bookingForm" data-delay="1">
       <h3>Reserve your place</h3>
-      <div class="two"><label>Name<input required name="name" placeholder="Your name"></label><label>Email<input required type="email" name="email" placeholder="you@email.com"></label></div>
-      <div class="two">
-        <label>Session<select name="session"><option>Sattvic Kitchen Basics</option><option>Cooking as Meditation</option><option>Ayurvedic Spice Alchemy</option><option>The Plant-Based Feast</option><option>Private group or team workshop</option></select></label>
-        <label>Guests<select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+      <p>Send us your request and we will confirm availability by email.</p>
+      <div class="form__row">
+        <label>Name<input required name="name" autocomplete="name" placeholder="Your name"></label>
+        <label>Email<input required type="email" name="email" autocomplete="email" placeholder="you@email.com"></label>
       </div>
-      <label>Message<textarea name="msg" rows="4" placeholder="Allergies, questions, preferred dates…"></textarea></label>
-      <button class="btn btn-primary" type="submit">Send request</button>
+      <div class="form__row">
+        <label>Workshop
+          <select name="session">
+            <option>Sattvic Kitchen Basics</option>
+            <option>Cooking as Meditation</option>
+            <option>Ayurvedic Spice Alchemy</option>
+            <option>The Plant-Based Feast</option>
+            <option>Private group or team workshop</option>
+          </select>
+        </label>
+        <label>Guests
+          <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
+        </label>
+      </div>
+      <label>Message<textarea name="message" rows="4" placeholder="Allergies, questions, preferred dates…"></textarea></label>
+      <button class="btn btn--primary" type="submit">Send request <svg class="icon"><use href="#i-arrow"/></svg></button>
+      <p class="form__status" id="formStatus" role="status"></p>
     </form>
   </div>
 </section>
 
-<footer>
-  <div class="logo">Bhakti Space</div>
-  <p>Vegetarian · Sattvic · Conscious Cooking</p>
-  <p style="margin-top:10px">© 2026 Bhakti Space. All rights reserved.</p>
+</main>
+
+<!-- =============================== FOOTER =============================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a href="#top" class="logo">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c3 4 7 6 7 11a7 7 0 0 1-14 0c0-5 4-7 7-11Z" fill="#d98b2b"/><path d="M4 22c4-1 8 0 12 5 4-5 8-6 12-5-2 5-7 7-12 7S6 27 4 22Z" fill="#8cc29a"/></svg>
+          Bhakti Space
+        </a>
+        <p>Conscious, sattvic and vegetarian cooking workshops. Cook with intention, eat with gratitude.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#sessions">Workshops</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Amsterdam, Netherlands</li>
+          <li><a href="mailto:hello@bhaktispace.com">hello@bhaktispace.com</a></li>
+          <li><a href="#contact">Book a seat</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Bhakti Space. All rights reserved.</span>
+      <span>Vegetarian · Sattvic · Conscious</span>
+    </div>
+  </div>
 </footer>
 
-<script>
-// nav
-const nav=document.getElementById('nav');
-const onScroll=()=>nav.classList.toggle('solid',scrollY>60);onScroll();addEventListener('scroll',onScroll,{passive:true});
-const links=document.getElementById('links');
-document.getElementById('burger').onclick=()=>links.classList.toggle('open');
-links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
-
-// marquee
-const words=['Vegetarian','Sattvic','Conscious Cooking','Seasonal','Plant-Based','Mindful Eating','Community','Gratitude'];
-document.getElementById('strip').innerHTML=[...words,...words].map(w=>w+'<span>✦</span>').join('')+[...words,...words].map(w=>w+'<span>✦</span>').join('');
-
-// carousels
-function carousel(id,perView){
-  const root=document.getElementById(id),track=root.querySelector('.track'),n=track.children.length;
-  const dots=document.querySelector('.dots[data-for="'+id+'"]');
-  let i=0,timer;
-  const pv=()=>typeof perView==='function'?perView():1;
-  const max=()=>Math.max(0,n-pv());
-  function go(k){i=k>max()?0:k<0?max():k;track.style.transform='translateX(-'+(i*100/pv())+'%)';
-    if(dots)[...dots.children].forEach((d,j)=>d.classList.toggle('on',j===i))}
-  if(dots){for(let k=0;k<n;k++){const b=document.createElement('button');b.setAttribute('aria-label','Slide '+(k+1));b.onclick=()=>{go(k);reset()};dots.appendChild(b)}}
-  document.querySelectorAll('[data-car="'+id+'"]').forEach(b=>b.onclick=()=>{go(i+ +b.dataset.d);reset()});
-  function reset(){clearInterval(timer);timer=setInterval(()=>go(i+1),id==='q'?6500:5200)}
-  let sx=0;root.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
-  root.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>45){go(i+(d<0?1:-1));reset()}});
-  addEventListener('resize',()=>go(Math.min(i,max())));
-  go(0);reset();
-}
-carousel('g');carousel('s',()=>innerWidth>980?3:innerWidth>700?2:1);carousel('q');
-carousel('r',()=>innerWidth>980?3:innerWidth>700?2:1);
-
-// reveal
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-// form -> mailto
-document.getElementById('form').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);
-  const body=`Name: ${f.get('name')}%0AEmail: ${f.get('email')}%0ASession: ${f.get('session')}%0AGuests: ${f.get('guests')}%0A%0A${encodeURIComponent(f.get('msg')||'')}`;
-  location.href=`mailto:hello@bhaktispace.com?subject=${encodeURIComponent('Booking request: '+f.get('session'))}&body=${body}`};
-</script>
 </body>
 </html>
