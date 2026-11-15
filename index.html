@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!doctype html>
 <html lang="en">
 <head>
@@ -52,7 +51,8 @@ nav.solid .burger{color:var(--green-d)}
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;padding:0;overflow:hidden}
 .hero-slides{position:absolute;inset:0}
 .hero-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease,transform 9s ease;transform:scale(1.04)}
-.hero-slides img.on{opacity:1;transform:scale(1.12)}
+.hero-slides img.on{opacity:1;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.18)}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,38,22,.9) 0%,rgba(10,38,22,.68) 45%,rgba(10,38,22,.25) 100%)}
 .hero .wrap{position:relative;z-index:2;padding-top:90px;padding-bottom:60px}
 .hero h1{color:#fff;font-size:clamp(2.9rem,7.2vw,5.6rem);max-width:780px}
@@ -90,6 +90,7 @@ nav.solid .burger{color:var(--green-d)}
 .sess-track .slide{padding:14px 12px}.sess-track .sess{height:100%}
 .sess{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 8px 30px -18px rgba(0,0,0,.3);display:flex;flex-direction:column;transition:.3s}
 .sess:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.simg{height:190px;overflow:hidden}.simg img{width:100%;height:100%;object-fit:cover}
 .sess .top{min-height:128px;padding:30px 30px 22px;background:linear-gradient(135deg,var(--green) 0%,var(--green-d) 100%);color:#fff;position:relative}
 .sess-track .slide:nth-child(even) .top{background:linear-gradient(135deg,#b46f17 0%,#8a510c 100%)}
 .sess .num{font-family:'Cormorant Garamond',serif;font-size:3.6rem;opacity:.25;position:absolute;right:22px;top:6px;line-height:1}
@@ -225,8 +226,6 @@ footer .logo{justify-content:center;color:#fff;margin-bottom:8px}
 <header class="hero" id="top">
   <div class="hero-slides" id="heroSlides">
     <img class="on" src="img/group.jpg" alt="Bhakti Space cooking community in green aprons">
-    <img src="img/table.jpg" alt="Workshop table set for a shared cooking session">
-    <img src="img/group2.jpg" alt="Participants after a cooking workshop">
   </div>
   <div class="wrap">
     <span class="eyebrow" style="color:var(--saffron-l)">Vegetarian · Sattvic · Conscious Cooking</span>
@@ -249,9 +248,8 @@ footer .logo{justify-content:center;color:#fff;margin-bottom:8px}
 <section id="about">
   <div class="wrap about">
     <div class="about-img reveal">
-      <img class="main" src="img/team.jpg" alt="Bhakti Space team and participants smiling together">
-      <img class="float" src="img/prep.jpg" alt="Cutting boards, knives and aprons ready for cooking">
-    </div>
+      <img class="main" src="img/table2.jpg" alt="Participants gathered around the long workshop table" style="object-position:60% 50%">
+      </div>
     <div class="reveal">
       <span class="eyebrow">Our Story</span>
       <h2>A kitchen that feeds more than the body</h2>
@@ -284,19 +282,19 @@ footer .logo{justify-content:center;color:#fff;margin-bottom:8px}
       <p class="lead">Four signature workshops, each hands-on and ending with everyone sharing the meal they made. Swipe or use the arrows.</p>
     </div>
     <div class="car sess-wrap" id="s"><div class="track rev-track sess-track">
-<div class="slide"><article class="sess"><div class="top"><span class="num">01</span><span class="tag">Beginner friendly</span><h3>Sattvic Kitchen Basics</h3></div>
+<div class="slide"><article class="sess"><div class="simg"><img src="img/chef.jpg" alt="" style="object-position:50% 30%"></div><div class="top"><span class="num">01</span><span class="tag">Beginner friendly</span><h3>Sattvic Kitchen Basics</h3></div>
         <div class="body"><p>Learn the foundations of a calm, balanced kitchen: khichdi, seasonal sabzi, fresh chutneys and soft rotis.</p>
         <ul><li>Sattvic principles explained</li><li>Knife skills and prep rhythm</li><li>A full 4-dish meal</li></ul>
         <div class="meta"><span>3.5 hrs · €65</span><a href="#contact">Book →</a></div></div></article></div>
-<div class="slide"><article class="sess"><div class="top"><span class="num">02</span><span class="tag">Mindfulness</span><h3>Cooking as Meditation</h3></div>
+<div class="slide"><article class="sess"><div class="simg"><img src="img/table.jpg" alt="" style="object-position:50% 40%"></div><div class="top"><span class="num">02</span><span class="tag">Mindfulness</span><h3>Cooking as Meditation</h3></div>
         <div class="body"><p>A slower session beginning in silence. Cook with breath, intention and attention, then eat mindfully together.</p>
         <ul><li>Opening breath practice</li><li>Silent cooking circle</li><li>Mindful eating ritual</li></ul>
         <div class="meta"><span>3 hrs · €60</span><a href="#contact">Book →</a></div></div></article></div>
-<div class="slide"><article class="sess"><div class="top"><span class="num">03</span><span class="tag">Flavour</span><h3>Ayurvedic Spice Alchemy</h3></div>
+<div class="slide"><article class="sess"><div class="simg"><img src="img/spices.jpg" alt="" style="object-position:50% 25%"></div><div class="top"><span class="num">03</span><span class="tag">Flavour</span><h3>Ayurvedic Spice Alchemy</h3></div>
         <div class="body"><p>Discover how turmeric, cumin, fennel, ginger and hing heal and delight. Blend your own masala to take home.</p>
         <ul><li>Spices for digestion and balance</li><li>Tempering (tadka) technique</li><li>Your own spice jar</li></ul>
         <div class="meta"><span>3 hrs · €65</span><a href="#contact">Book →</a></div></div></article></div>
-<div class="slide"><article class="sess"><div class="top"><span class="num">04</span><span class="tag">Seasonal</span><h3>The Plant-Based Feast</h3></div>
+<div class="slide"><article class="sess"><div class="simg"><img src="img/feast.jpg" alt="" style="object-position:50% 55%"></div><div class="top"><span class="num">04</span><span class="tag">Seasonal</span><h3>The Plant-Based Feast</h3></div>
         <div class="body"><p>A celebratory multi-course vegetarian meal built on the season's harvest, ideal for groups and friends.</p>
         <ul><li>Starter, main, side and dessert</li><li>Plating and presentation</li><li>Perfect for team or friend groups</li></ul>
         <div class="meta"><span>4 hrs · €80</span><a href="#contact">Book →</a></div></div></article></div>
@@ -317,11 +315,10 @@ footer .logo{justify-content:center;color:#fff;margin-bottom:8px}
     </div>
     <div class="car" id="g">
       <div class="track">
-        <div class="slide gal-slide"><img src="img/group.jpg" alt="Group photo"><div class="cap">Every workshop ends as a family</div></div>
-        <div class="slide gal-slide"><img src="img/table.jpg" alt="Long workshop table"><div class="cap">One long table, one shared meal</div></div>
-        <div class="slide gal-slide"><img src="img/prep.jpg" alt="Prep station"><div class="cap">Everything ready, mind unhurried</div></div>
-        <div class="slide gal-slide"><img src="img/team.jpg" alt="Team smiling"><div class="cap">Joy is the secret ingredient</div></div>
-        <div class="slide gal-slide"><img src="img/group2.jpg" alt="Participants"><div class="cap">New friends, new recipes</div></div>
+        <div class="slide gal-slide"><img src="img/plate.jpg" alt="A plate of freshly cooked vegetarian food" style="object-position:50% 40%"><div class="cap">Food made with care, eaten with gratitude</div></div>
+        <div class="slide gal-slide"><img src="img/serving.jpg" alt="Host serving food" style="object-position:50% 55%"><div class="cap">Cooking is better when it is shared</div></div>
+        <div class="slide gal-slide"><img src="img/prep.jpg" alt="Prep station" style="object-position:50% 40%"><div class="cap">Everything ready, mind unhurried</div></div>
+        <div class="slide gal-slide"><img src="img/team.jpg" alt="Team smiling" style="object-position:50% 45%"><div class="cap">Joy is the secret ingredient</div></div>
       </div>
     </div>
     <div class="dots" data-for="g"></div>
@@ -439,10 +436,6 @@ links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('ope
 const words=['Vegetarian','Sattvic','Conscious Cooking','Seasonal','Plant-Based','Mindful Eating','Community','Gratitude'];
 document.getElementById('strip').innerHTML=[...words,...words].map(w=>w+'<span>✦</span>').join('')+[...words,...words].map(w=>w+'<span>✦</span>').join('');
 
-// hero slideshow
-const hs=[...document.querySelectorAll('#heroSlides img')];let hi=0;
-setInterval(()=>{hs[hi].classList.remove('on');hi=(hi+1)%hs.length;hs[hi].classList.add('on')},6000);
-
 // carousels
 function carousel(id,perView){
   const root=document.getElementById(id),track=root.querySelector('.track'),n=track.children.length;
@@ -474,5 +467,3 @@ document.getElementById('form').onsubmit=e=>{e.preventDefault();const f=new Form
 </script>
 </body>
 </html>
-
-</body></html>
